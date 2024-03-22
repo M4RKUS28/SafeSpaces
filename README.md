@@ -1,4 +1,4 @@
-# SafeSpaces - Hackathon 2024 St. Gallen
+# SafeSpaces - Hackathon 2024 St. Gallen - Team Bitbaumeister
 
 
 ## Table of Contents
