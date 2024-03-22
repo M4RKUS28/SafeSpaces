@@ -49,6 +49,9 @@ void WebSocketEasyServer::broadcast(const QString &msg, const QWebSocket *exclud
 //! [onNewConnection]
 void WebSocketEasyServer::onNewConnection()
 {
+    if (m_debug)
+        qDebug() << "New Connection";
+
     QWebSocket *pSocket = m_pWebSocketServer->nextPendingConnection();
 
     connect(pSocket, &QWebSocket::textMessageReceived, this, &WebSocketEasyServer::processTextMessage);
@@ -88,7 +91,7 @@ void WebSocketEasyServer::processTextMessage(QString message)
     // Send the message back to the client
  // auto db = SQLiteManager("EmergencyAppAPIServer.db", 1000);
  // auto data = db.getValue(ip);
-    QString broad_msg = "{\"id\": 0, \"FLOOR\": \"Floor 3\", \"ROOM\": \"Room B41\", \"TYPE\": \"FIRE\"}";
+    QString broad_msg = "{\"id\": 0, \"FLOOR\": \"Floor 3\", \"ROOM\": \"Room B41\", \"TYPE\": \"MEDICAL\"}";
 
     // Broadcast the message to all connected clients
     this->broadcast(broad_msg, pClient);

@@ -137,6 +137,7 @@ void PositionLogger::newData()
 
     if(!ipv4.isEmpty()) {
         db.putValue(ipv4, jsonString);
+        qDebug() << "\n";
     }
 
 #ifdef GUI

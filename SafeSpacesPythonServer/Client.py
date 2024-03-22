@@ -43,7 +43,7 @@ class Client:
             #data = db.get(ip)
             #if not data:
             #    data = "NONE"
-            broad_msg = '{"id": 0, "FLOOR": "Floor 3", "ROOM": "Room B41", "TYPE": "FIRE"}'
+            broad_msg = '{"id": 0, "FLOOR": "Floor 3", "ROOM": "Room B41", "TYPE": "MEDICAL"}'
 
             # Broadcast the message to all connected clients
             try:

@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 #endif
 
     bool debug = true;
-    int port = 8088;
+    int port = 8080;
     WebSocketEasyServer webserver(port, debug);
     PositionLogger logger(debug);
 
