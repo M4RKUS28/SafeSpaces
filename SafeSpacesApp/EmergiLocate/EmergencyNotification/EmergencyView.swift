@@ -70,7 +70,7 @@ struct EmergencyView: View {
                 }
             }
             .onAppear {
-                webSocketManager.scheduleNotification(type: webSocketManager.receivedObject?.TYPE ?? "Emergency", floor: webSocketManager.receivedObject?.FLOOR ?? "Room N/A", room: webSocketManager.receivedObject?.ROOM ?? "Emergency")
+               // webSocketManager.scheduleNotification(type: webSocketManager.receivedObject?.TYPE ?? "Emergency", floor: webSocketManager.receivedObject?.FLOOR ?? "Room N/A", room: webSocketManager.receivedObject?.ROOM ?? "Emergency")
                 // Start the countdown
                 Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
                     nextViewActive = !nextViewActive
