@@ -17,10 +17,16 @@ struct HelpComingView: View {
                 
                 Spacer()
                 VStack {
-                    Text("Help is on the way")
-                        .fontWeight(.bold)
-                        .font(.title)
-                        .padding()
+                    HStack {
+                        Text("Calling help")
+                            .fontWeight(.bold)
+                            .font(.title)
+                           
+                        Image(systemName: "phone.badge.waveform")
+                            .foregroundStyle(.black)
+                            .font(.system(size: geometry.size.width * 0.1))
+
+                    }
                     Spacer()
                     Image("Image")
                         .resizable()
@@ -33,7 +39,7 @@ struct HelpComingView: View {
                         
                         Button(action: {
                             print("Solution resolved")
-                            let content = UNMutableNotificationContent()
+                            /*let content = UNMutableNotificationContent()
                             content.title = "Emergency Alert"
                             content.body = "Emergency situation reported at Location X."
 
@@ -44,14 +50,14 @@ struct HelpComingView: View {
                             let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
 
                             // Schedule the notification
-                            UNUserNotificationCenter.current().add(request)
+                            UNUserNotificationCenter.current().add(request)*/
                             jumpBack = true
                         }) {
                             HStack {
-                                Image(systemName: "cross.case.fill")
+                                Image(systemName: "phone.down")
                                     .foregroundColor(.red)
                                     .font(.system(size: geometry.size.width * 0.25))
-                                
+                                    
                                 Text("Situation resolved?")
                                     .foregroundStyle(.black)
                                     .fontWeight(.bold)
