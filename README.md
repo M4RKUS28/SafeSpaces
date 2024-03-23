@@ -18,17 +18,17 @@ SafeSpaces is a practical solution for emergency situations which assists in loc
 - Huber
 
 ## Structure
-# Cisco_STARTHACK24
+### Cisco_STARTHACK24
 Contains all files neccessary to access and use the Cisco Firehose API
 
-# SafeSpacesApp
+### SafeSpacesApp
 Frontend: Contains the UI written in Swift and the client side of the system. The clients can call an emergency (in one of 3 categories, Fire, Medical or Hazard) which is communicated to the server.
 When the server communicates back with location data, the client will (depending on the type of emergency) throw a notification to alert the user. The user then has the option to (depending on the type of emergency) get led the way to the nearest exit (in case of fire) or get led to the emergency location (in case of a medical emergency and a person in need of help).
 
-# SafeSpacesCPPServer
+### SafeSpacesCPPServer
 Backend: Contains the CPP server that pulls data from the Firehose API, processes it and logs it into a database.The server also analyzes it on request from the mobile App. The clients on the app are connected to the server and when an emergy call is sent from a client, the server fetches the clients positions via IP or MAC address, to communicate location data of the emergency and type of emergency to all clients in the network.
 
-# SafeSpacesPythonServer
+### SafeSpacesPythonServer
 Does the exact same thing as the CPP server but in Python.
 
 
